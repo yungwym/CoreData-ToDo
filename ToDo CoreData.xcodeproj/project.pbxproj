@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		FFAD35731F1FF57100F060D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAD35721F1FF57100F060D2 /* main.m */; };
 		FFAD35761F1FF57100F060D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAD35751F1FF57100F060D2 /* AppDelegate.m */; };
-		FFAD35791F1FF57100F060D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAD35781F1FF57100F060D2 /* ViewController.m */; };
 		FFAD357C1F1FF57100F060D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAD357A1F1FF57100F060D2 /* Main.storyboard */; };
 		FFAD357F1F1FF57100F060D2 /* ToDo_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFAD357D1F1FF57100F060D2 /* ToDo_CoreData.xcdatamodeld */; };
 		FFAD35811F1FF57100F060D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAD35801F1FF57100F060D2 /* Assets.xcassets */; };
 		FFAD35841F1FF57100F060D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAD35821F1FF57100F060D2 /* LaunchScreen.storyboard */; };
+		FFAD358D1F1FFBE100F060D2 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAD358C1F1FFBE100F060D2 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +21,13 @@
 		FFAD35721F1FF57100F060D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FFAD35741F1FF57100F060D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FFAD35751F1FF57100F060D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FFAD35771F1FF57100F060D2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FFAD35781F1FF57100F060D2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FFAD357B1F1FF57100F060D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFAD357E1F1FF57100F060D2 /* ToDo_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo_CoreData.xcdatamodel; sourceTree = "<group>"; };
 		FFAD35801F1FF57100F060D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFAD35831F1FF57100F060D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFAD35851F1FF57100F060D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFAD358B1F1FFBE100F060D2 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
+		FFAD358C1F1FFBE100F060D2 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +62,8 @@
 			children = (
 				FFAD35741F1FF57100F060D2 /* AppDelegate.h */,
 				FFAD35751F1FF57100F060D2 /* AppDelegate.m */,
-				FFAD35771F1FF57100F060D2 /* ViewController.h */,
-				FFAD35781F1FF57100F060D2 /* ViewController.m */,
+				FFAD358B1F1FFBE100F060D2 /* TableViewController.h */,
+				FFAD358C1F1FFBE100F060D2 /* TableViewController.m */,
 				FFAD357A1F1FF57100F060D2 /* Main.storyboard */,
 				FFAD35801F1FF57100F060D2 /* Assets.xcassets */,
 				FFAD357D1F1FF57100F060D2 /* ToDo_CoreData.xcdatamodeld */,
@@ -154,10 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFAD35791F1FF57100F060D2 /* ViewController.m in Sources */,
 				FFAD35761F1FF57100F060D2 /* AppDelegate.m in Sources */,
 				FFAD357F1F1FF57100F060D2 /* ToDo_CoreData.xcdatamodeld in Sources */,
 				FFAD35731F1FF57100F060D2 /* main.m in Sources */,
+				FFAD358D1F1FFBE100F060D2 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

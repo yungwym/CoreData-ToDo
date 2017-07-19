@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Task+CoreDataClass.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    _context = self.persistentContainer.viewContext;
+    
+    [self createTask];
+    
     return YES;
 }
 
@@ -46,6 +52,19 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
+    [self saveContext];
+}
+
+#pragma mark - Create Tasks
+
+-(void)createTask {
+    
+    Task *task = [[Task alloc] initWithContext:self.context];
+    task.title = @"Kill myself";
+    task.taskDescription = @"Bullet to the brain";
+    task.priorityNumber = 1;
+    task.completed = NO;
+    
     [self saveContext];
 }
 
