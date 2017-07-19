@@ -7,8 +7,17 @@
 //
 
 #import "TableViewController.h"
+#import "Task+CoreDataProperties.h"
+#import "AppDelegate.h"
+#import "TaskTableViewCell.h"
+#import "DetailViewController.h"
 
 @interface TableViewController ()
+
+@property (nonatomic, strong) NSArray <Task*>*taskArray;
+@property (weak, nonatomic) AppDelegate *appDelegate;
+@property (nonatomic, strong) NSManagedObjectContext *context;
+
 
 @end
 
@@ -17,30 +26,74 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.taskArray = [NSArray new];
+    self.appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.context = self.appDelegate.context;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self fetchWithSort];
+    
+    
 }
+
+-(void)setTaskArray:(NSArray<Task *> *)taskArray {
+    
+    _taskArray = taskArray;
+    [self.tableView reloadData];
+}
+
+
+- (void)fetchWithSort {
+    NSSortDescriptor *prioritySort = [NSSortDescriptor sortDescriptorWithKey:@"priorityNumber" ascending:NO];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Task"];
+    request.sortDescriptors = @[prioritySort];
+    NSArray <Task*>*result = [self.context executeFetchRequest:request error:nil];
+    self.taskArray = result;
+}
+
+
+
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 0;
+    return self.taskArray.count;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TaskTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    Task *t = self.taskArray[indexPath.row];
+    cell.titleLabel.text = t.title;
+    cell.descriptionLabel.text = t.taskDescription;
+    cell.numberLabel.text = [NSString stringWithFormat:@"%hd", t.priorityNumber];
+    return cell; 
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"cell"]) {
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
+        Task *detailTask = self.taskArray[indexPath.row];
+        
+        DetailViewController *dvc = segue.destinationViewController;
+        
+        dvc.task = detailTask;
+    }
+}
 
 
 @end

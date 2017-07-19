@@ -14,6 +14,9 @@
 		FFAD35811F1FF57100F060D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFAD35801F1FF57100F060D2 /* Assets.xcassets */; };
 		FFAD35841F1FF57100F060D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAD35821F1FF57100F060D2 /* LaunchScreen.storyboard */; };
 		FFAD358D1F1FFBE100F060D2 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAD358C1F1FFBE100F060D2 /* TableViewController.m */; };
+		FFAD35901F2001B000F060D2 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAD358F1F2001B000F060D2 /* TaskTableViewCell.m */; };
+		FFAD35931F2001C900F060D2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAD35921F2001C900F060D2 /* DetailViewController.m */; };
+		FFAD35961F2001D400F060D2 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAD35951F2001D400F060D2 /* NewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		FFAD35851F1FF57100F060D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFAD358B1F1FFBE100F060D2 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
 		FFAD358C1F1FFBE100F060D2 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
+		FFAD358E1F2001B000F060D2 /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
+		FFAD358F1F2001B000F060D2 /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
+		FFAD35911F2001C900F060D2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FFAD35921F2001C900F060D2 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FFAD35941F2001D400F060D2 /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		FFAD35951F2001D400F060D2 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +73,12 @@
 				FFAD35751F1FF57100F060D2 /* AppDelegate.m */,
 				FFAD358B1F1FFBE100F060D2 /* TableViewController.h */,
 				FFAD358C1F1FFBE100F060D2 /* TableViewController.m */,
+				FFAD358E1F2001B000F060D2 /* TaskTableViewCell.h */,
+				FFAD358F1F2001B000F060D2 /* TaskTableViewCell.m */,
+				FFAD35911F2001C900F060D2 /* DetailViewController.h */,
+				FFAD35921F2001C900F060D2 /* DetailViewController.m */,
+				FFAD35941F2001D400F060D2 /* NewViewController.h */,
+				FFAD35951F2001D400F060D2 /* NewViewController.m */,
 				FFAD357A1F1FF57100F060D2 /* Main.storyboard */,
 				FFAD35801F1FF57100F060D2 /* Assets.xcassets */,
 				FFAD357D1F1FF57100F060D2 /* ToDo_CoreData.xcdatamodeld */,
@@ -154,10 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFAD35961F2001D400F060D2 /* NewViewController.m in Sources */,
 				FFAD35761F1FF57100F060D2 /* AppDelegate.m in Sources */,
 				FFAD357F1F1FF57100F060D2 /* ToDo_CoreData.xcdatamodeld in Sources */,
+				FFAD35901F2001B000F060D2 /* TaskTableViewCell.m in Sources */,
 				FFAD35731F1FF57100F060D2 /* main.m in Sources */,
 				FFAD358D1F1FFBE100F060D2 /* TableViewController.m in Sources */,
+				FFAD35931F2001C900F060D2 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
